@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".colorsButton">
+
+    <Button
+        android:id="@+id/bntTrueOrFalse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:text="Угадай цвет"
+        android:textSize="25dp"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:layout_weight="1"
+        >
+
+        <Button
+            android:id="@+id/btnRed"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FF0000"
+            android:layout_margin="3dp" />
+
+        <Button
+            android:id="@+id/btnYellow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FFFF00"
+            android:layout_margin="3dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/btnGreen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00FF00"
+            android:layout_margin="3dp"/>
+
+        <Button
+            android:id="@+id/btnBlue"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00FFFF"
+            android:layout_margin="3dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/btnMazarine"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#0000FF"
+            android:layout_margin="3dp"/>
+
+        <Button
+            android:id="@+id/btnPurple"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FF00FF"
+            android:layout_margin="3dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/btnOrange"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FF4500"
+            android:layout_margin="3dp"/>
+
+        <Button
+            android:id="@+id/btnIndigo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#4B0082"
+            android:layout_margin="3dp"/>
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/buttonResetColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00FF00"
+        android:text="Еще раз"
+        android:textSize="20dp"
+        android:visibility="invisible"
+        android:layout_weight="1"/>
+
+    <Button
+        android:id="@+id/buttonExitColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FF0000"
+        android:text="Выйти"
+        android:textSize="20dp"
+        android:layout_weight="1"/>
+</LinearLayout>

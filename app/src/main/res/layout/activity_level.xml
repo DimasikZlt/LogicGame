@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Level"
+    android:background="#000000">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttonVeryEasy"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00FF00"
+            android:text="Очень Легко"
+            android:textColor="#000000"
+            android:textSize="25dp"
+            android:layout_margin="3dp"/>
+
+        <Button
+            android:id="@+id/buttonEasy"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#009900"
+            android:text="Легко"
+            android:textColor="#000000"
+            android:textSize="30dp"
+            android:layout_margin="3dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttonNormal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FFFF00"
+            android:text="Нормально"
+            android:textColor="#000000"
+            android:textSize="25dp"
+            android:layout_margin="3dp"/>
+
+        <Button
+            android:id="@+id/buttonHard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FF4500"
+            android:text="Сложно"
+            android:textColor="#000000"
+            android:textSize="30dp"
+            android:layout_margin="3dp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttonVeryHard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FF0000"
+            android:text="Очень сложно"
+            android:textColor="#000000"
+            android:textSize="30dp"
+            android:layout_margin="3dp"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

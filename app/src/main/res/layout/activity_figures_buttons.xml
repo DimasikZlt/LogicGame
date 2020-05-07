@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".figures_buttons">
+
+    <Button
+        android:id="@+id/bntTrueOrFalseFigure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#FFFFFF"
+        android:text="Угадай фигуру"
+        android:textSize="25dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#000000">
+
+        <ImageButton
+            android:id="@+id/btnBox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:src="@drawable/box_min" />
+
+        <ImageButton
+            android:id="@+id/btnRectangle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:src="@drawable/rectangle_min" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#000000">
+
+        <ImageButton
+            android:id="@+id/btnCircle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:src="@drawable/circle_min" />
+
+        <ImageButton
+            android:id="@+id/btnElipse"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:src="@drawable/elipse_min" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#000000">
+
+        <ImageButton
+            android:id="@+id/btnRomb"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:src="@drawable/romb_min" />
+
+        <ImageButton
+            android:id="@+id/btnTriangle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:src="@drawable/triangle_min" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonResetFigure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#00FF00"
+        android:text="Еще раз"
+        android:textSize="20dp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/buttonExitFigure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#FF0000"
+        android:text="Выйти"
+        android:textSize="20dp" />
+
+</LinearLayout>

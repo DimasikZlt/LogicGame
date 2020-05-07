@@ -16,7 +16,6 @@ public class randomFigure extends AppCompatActivity {
     public final static String tag = "FigureButton";
     public static final String APP_PREFERENCES = "levelOfDifficulty";
     public static final String APP_PREFERENCES_TIME = "PRTime";
-    private SharedPreferences mSettings;
     int mSecondsTime;
 
     @Override
@@ -25,15 +24,16 @@ public class randomFigure extends AppCompatActivity {
         setContentView(R.layout.activity_figur);
         imBtn = findViewById(R.id.btnFigure);
         final int[] pictures = {
+                R.drawable.box,
+                R.drawable.rectangle,
                 R.drawable.circle,
                 R.drawable.elipse,
-                R.drawable.box,
-                R.drawable.triangle,
-                R.drawable.rectangle
+                R.drawable.romb,
+                R.drawable.triangle
         };
-        final int indexOfPicture = (int) (Math.random() * 5);
+        final int indexOfPicture = (int) (Math.random() * 6);
         imBtn.setImageResource(pictures[indexOfPicture]);
-        final Intent intent = new Intent(randomFigure.this, MainActivity.class);
+        final Intent intent = new Intent(randomFigure.this, figures_buttons.class);
         intent.putExtra(tag, indexOfPicture);
         Timer timer = new Timer();
         TimerTask timerTask = new TimerTask() {
@@ -42,7 +42,7 @@ public class randomFigure extends AppCompatActivity {
                 startActivity(intent);
             }
         };
-        mSettings = mSettings = getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE);
+        SharedPreferences mSettings = getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE);
         if (mSettings.contains(APP_PREFERENCES_TIME)) {
             mSecondsTime = mSettings.getInt(APP_PREFERENCES_TIME, 0);
         }

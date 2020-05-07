@@ -10,9 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/btnFigure"
-        android:background="#FF0000"
-        android:src="@drawable/box"
+        android:background="#FFFFFF"
         />
-
 
 </LinearLayout>

@@ -20,7 +20,6 @@ public class randomColor extends AppCompatActivity {
     public final static String tag = "ColorButton";
     public static final String APP_PREFERENCES = "levelOfDifficulty";
     public static final String APP_PREFERENCES_TIME = "PRTime";
-    private SharedPreferences mSettings;
     int mSecondsTime;
 
     @Override
@@ -40,7 +39,7 @@ public class randomColor extends AppCompatActivity {
                 startActivity(intent);
             }
         };
-        mSettings = mSettings = getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE);
+        SharedPreferences mSettings = getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE);
         if (mSettings.contains(APP_PREFERENCES_TIME)) {
             mSecondsTime = mSettings.getInt(APP_PREFERENCES_TIME, 0);
         }

@@ -27,7 +27,7 @@ public class randomColor extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_color);
         button = findViewById(R.id.btnColorGo);
-        final String[] colors = {"#FF0000", "#FFFF00", "#00FF00", "#00FFFF", "#0000FF", "#FF00FF", "#FF4500", "#4B0082"};
+        final String[] colors = {"#FF0000", "#FFFF00", "#00FF00", "#00FFFF", "#0000FF", "#FF69B4", "#FF8C00", "#4B0082"};
         final String color = colors[(int) (Math.random() * 8)];
         button.setBackgroundColor(Color.parseColor(color));
         final Intent intent = new Intent(randomColor.this, colorsButton.class);

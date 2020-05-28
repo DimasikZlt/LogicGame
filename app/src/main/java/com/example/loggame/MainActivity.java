@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -16,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnLevel;
     public static final String APP_PREFERENCES = "levelOfDifficulty";
     public static final String APP_PREFERENCES_TIME = "PRTime";
+    MediaPlayer menu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,15 +35,18 @@ public class MainActivity extends AppCompatActivity {
         btnStart = findViewById(R.id.buttonStart);
         btnEnd = findViewById(R.id.buttonEnd);
         btnLevel = findViewById(R.id.buttonLevel);
+        menu = MediaPlayer.create(this, R.raw.click_button);
         btnEnd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                menu.start();
                 finish();
             }
         });
         btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                menu.start();
                 Intent intent = new Intent(MainActivity.this, second_activity.class);
                 startActivity(intent);
             }
@@ -49,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
         btnLevel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                menu.start();
                 Intent intent = new Intent(MainActivity.this, Level.class);
                 startActivity(intent);
             }

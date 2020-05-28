@@ -3,6 +3,7 @@ package com.example.loggame;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -46,9 +47,11 @@ public class colorsButton extends AppCompatActivity {
                 if (!isCorrect && color.equals("#FF0000")) {
                     isCorrect = true;
                     resetColor.setVisibility(View.VISIBLE);
-                    TrueOrFalse.setText("ВЕРНО!");
+                    TrueOrFalse.setText("\nВЕРНО!\n");
+                    TrueOrFalse.setTextColor(Color.parseColor("#008000"));
                 } else if (!isCorrect) {
-                    TrueOrFalse.setText("Неверно, не красный. Попробуй еще раз!");
+                    TrueOrFalse.setText("Неверно!\nЭто не красный.\nПопробуй еще!");
+                    TrueOrFalse.setTextColor(Color.parseColor("#FF0000"));
                 }
             }
         });
@@ -58,9 +61,11 @@ public class colorsButton extends AppCompatActivity {
                 if (!isCorrect && color.equals("#FFFF00")) {
                     isCorrect = true;
                     resetColor.setVisibility(View.VISIBLE);
-                    TrueOrFalse.setText("ВЕРНО!");
+                    TrueOrFalse.setText("\nВЕРНО!\n");
+                    TrueOrFalse.setTextColor(Color.parseColor("#008000"));
                 } else if (!isCorrect) {
-                    TrueOrFalse.setText("Неверно , не желтый. Попробуй еще раз!");
+                    TrueOrFalse.setText("Неверно!\nЭто не желтый.\nПопробуй еще!");
+                    TrueOrFalse.setTextColor(Color.parseColor("#FF0000"));
                 }
             }
         });
@@ -70,9 +75,11 @@ public class colorsButton extends AppCompatActivity {
                 if (!isCorrect && color.equals("#00FF00")) {
                     isCorrect = true;
                     resetColor.setVisibility(View.VISIBLE);
-                    TrueOrFalse.setText("ВЕРНО!");
+                    TrueOrFalse.setText("\nВЕРНО!\n");
+                    TrueOrFalse.setTextColor(Color.parseColor("#008000"));
                 } else if (!isCorrect) {
-                    TrueOrFalse.setText("Неверно, не зеленый. Попробуй еще раз!");
+                    TrueOrFalse.setText("Неверно!\nЭто не зеленый.\nПопробуй еще!");
+                    TrueOrFalse.setTextColor(Color.parseColor("#FF0000"));
                 }
             }
         });
@@ -82,9 +89,11 @@ public class colorsButton extends AppCompatActivity {
                 if (!isCorrect && color.equals("#00FFFF")) {
                     isCorrect = true;
                     resetColor.setVisibility(View.VISIBLE);
-                    TrueOrFalse.setText("ВЕРНО!");
+                    TrueOrFalse.setText("\nВЕРНО!\n");
+                    TrueOrFalse.setTextColor(Color.parseColor("#008000"));
                 } else if (!isCorrect) {
-                    TrueOrFalse.setText("Неверно, не голубой. Попробуй еще раз!");
+                    TrueOrFalse.setText("Неверно!\nЭто не голубой.\nПопробуй еще!");
+                    TrueOrFalse.setTextColor(Color.parseColor("#FF0000"));
                 }
             }
         });
@@ -94,33 +103,39 @@ public class colorsButton extends AppCompatActivity {
                 if (!isCorrect && color.equals("#0000FF")) {
                     isCorrect = true;
                     resetColor.setVisibility(View.VISIBLE);
-                    TrueOrFalse.setText("ВЕРНО!");
+                    TrueOrFalse.setText("\nВЕРНО!\n");
+                    TrueOrFalse.setTextColor(Color.parseColor("#008000"));
                 } else if (!isCorrect) {
-                    TrueOrFalse.setText("Неверно, не синий. Попробуй еще раз!");
+                    TrueOrFalse.setText("Неверно!\nЭто не синий.\nПопробуй еще!");
+                    TrueOrFalse.setTextColor(Color.parseColor("#FF0000"));
                 }
             }
         });
         purple.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!isCorrect && color.equals("#FF00FF")) {
+                if (!isCorrect && color.equals("#FF69B4")) {
                     isCorrect = true;
                     resetColor.setVisibility(View.VISIBLE);
-                    TrueOrFalse.setText("ВЕРНО!");
+                    TrueOrFalse.setText("\nВЕРНО!\n");
+                    TrueOrFalse.setTextColor(Color.parseColor("#008000"));
                 } else if (!isCorrect) {
-                    TrueOrFalse.setText("Неверно, не розовый. Попробуй еще раз!");
+                    TrueOrFalse.setText("Неверно!\nЭто не розовый.\nПопробуй еще!");
+                    TrueOrFalse.setTextColor(Color.parseColor("#FF0000"));
                 }
             }
         });
         orange.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!isCorrect && color.equals("#FF4500")) {
+                if (!isCorrect && color.equals("#FF8C00")) {
                     isCorrect = true;
                     resetColor.setVisibility(View.VISIBLE);
-                    TrueOrFalse.setText("ВЕРНО!");
+                    TrueOrFalse.setText("\nВЕРНО!\n");
+                    TrueOrFalse.setTextColor(Color.parseColor("#008000"));
                 } else if (!isCorrect) {
-                    TrueOrFalse.setText("Неверно, не оранжевый. Попробуй еще раз!");
+                    TrueOrFalse.setText("Неверно!\nЭто не оранжевый.\nПопробуй еще!");
+                    TrueOrFalse.setTextColor(Color.parseColor("#FF0000"));
                 }
             }
         });
@@ -130,9 +145,11 @@ public class colorsButton extends AppCompatActivity {
                 if (!isCorrect && color.equals("#4B0082")) {
                     isCorrect = true;
                     resetColor.setVisibility(View.VISIBLE);
-                    TrueOrFalse.setText("ВЕРНО!");
+                    TrueOrFalse.setText("\nВЕРНО!\n");
+                    TrueOrFalse.setTextColor(Color.parseColor("#008000"));
                 } else if (!isCorrect) {
-                    TrueOrFalse.setText("Неверно, не фиолетовый. Попробуй еще раз!");
+                    TrueOrFalse.setText("Неверно!\nЭто не фиолетовый.\nПопробуй еще!");
+                    TrueOrFalse.setTextColor(Color.parseColor("#FF0000"));
                 }
             }
         });

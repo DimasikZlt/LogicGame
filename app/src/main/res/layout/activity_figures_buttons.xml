@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:background="#FFFFFF"
-        android:text="Угадай фигуру"
+        android:text="\nУгадай фигуру\n"
         android:textSize="25dp" />
 
     <LinearLayout
@@ -96,18 +96,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:background="#00FF00"
-        android:text="Еще раз"
+        android:background="#40E0D0"
+        android:text="Повторить?"
         android:textSize="20dp"
-        android:visibility="invisible" />
+        android:visibility="invisible"
+        android:layout_margin="10dp"/>
 
     <Button
         android:id="@+id/buttonExitFigure"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:background="#FF0000"
+        android:background="#40E0D0"
         android:text="Выйти"
-        android:textSize="20dp" />
+        android:textSize="20dp"
+        android:layout_margin="10dp"/>
 
 </LinearLayout>

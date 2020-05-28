@@ -11,6 +11,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="Запомни цвет!"
-        android:textColor="#222222"
+        android:textColor="#000000"
         android:textSize="30dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

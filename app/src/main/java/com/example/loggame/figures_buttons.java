@@ -3,7 +3,10 @@ package com.example.loggame;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -22,6 +25,8 @@ public class figures_buttons extends AppCompatActivity {
     Button exit;
     boolean isCorrect;
     int figure;
+    MediaPlayer wrong;
+    MediaPlayer correct;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +41,8 @@ public class figures_buttons extends AppCompatActivity {
         TrueOrFalse = findViewById(R.id.bntTrueOrFalseFigure);
         reset = findViewById(R.id.buttonResetFigure);
         exit = findViewById(R.id.buttonExitFigure);
+        wrong = MediaPlayer.create(this, R.raw.wrong);
+        correct = MediaPlayer.create(this, R.raw.correctly);
         isCorrect = false;
         Bundle argument = getIntent().getExtras();
         figure = Integer.parseInt(argument.get("FigureButton").toString());
@@ -45,9 +52,13 @@ public class figures_buttons extends AppCompatActivity {
                 if (!isCorrect && figure == 0) {
                     isCorrect = true;
                     reset.setVisibility(View.VISIBLE);
-                    TrueOrFalse.setText("ВЕРНО!");
+                    TrueOrFalse.setText("\nВЕРНО!\n");
+                    TrueOrFalse.setTextColor(Color.parseColor("#008000"));
+                    correct.start();
                 } else if (!isCorrect) {
-                    TrueOrFalse.setText("Неверно, не квадрат. Попробуй еще раз!");
+                    TrueOrFalse.setText("Неверно!\nЭто не квадрат.\nПопробуй еще!");
+                    TrueOrFalse.setTextColor(Color.parseColor("#FF0000"));
+                    wrong.start();
                 }
             }
         });
@@ -57,9 +68,13 @@ public class figures_buttons extends AppCompatActivity {
                 if (!isCorrect && figure == 1) {
                     isCorrect = true;
                     reset.setVisibility(View.VISIBLE);
-                    TrueOrFalse.setText("ВЕРНО!");
+                    TrueOrFalse.setText("\nВЕРНО!\n");
+                    TrueOrFalse.setTextColor(Color.parseColor("#008000"));
+                    correct.start();
                 } else if (!isCorrect) {
-                    TrueOrFalse.setText("Неверно, не прямоугольник. Попробуй еще раз!");
+                    TrueOrFalse.setText("Неверно!\nЭто не прямоугольник.\nПопробуй еще!");
+                    TrueOrFalse.setTextColor(Color.parseColor("#FF0000"));
+                    wrong.start();
                 }
             }
         });
@@ -69,9 +84,13 @@ public class figures_buttons extends AppCompatActivity {
                 if (!isCorrect && figure == 2) {
                     isCorrect = true;
                     reset.setVisibility(View.VISIBLE);
-                    TrueOrFalse.setText("ВЕРНО!");
+                    TrueOrFalse.setText("\nВЕРНО!\n");
+                    TrueOrFalse.setTextColor(Color.parseColor("#008000"));
+                    correct.start();
                 } else if (!isCorrect) {
-                    TrueOrFalse.setText("Неверно, не круг. Попробуй еще раз!");
+                    TrueOrFalse.setText("Неверно!\nЭто не круг.\nПопробуй еще!");
+                    TrueOrFalse.setTextColor(Color.parseColor("#FF0000"));
+                    wrong.start();
                 }
             }
         });
@@ -81,9 +100,13 @@ public class figures_buttons extends AppCompatActivity {
                 if (!isCorrect && figure == 3) {
                     isCorrect = true;
                     reset.setVisibility(View.VISIBLE);
-                    TrueOrFalse.setText("ВЕРНО!");
+                    TrueOrFalse.setText("\nВЕРНО!\n");
+                    TrueOrFalse.setTextColor(Color.parseColor("#008000"));
+                    correct.start();
                 } else if (!isCorrect) {
-                    TrueOrFalse.setText("Неверно, не овал. Попробуй еще раз!");
+                    TrueOrFalse.setText("Неверно!\nЭто не овал.\nПопробуй еще!");
+                    TrueOrFalse.setTextColor(Color.parseColor("#FF0000"));
+                    wrong.start();
                 }
             }
         });
@@ -93,9 +116,13 @@ public class figures_buttons extends AppCompatActivity {
                 if (!isCorrect && figure == 4) {
                     isCorrect = true;
                     reset.setVisibility(View.VISIBLE);
-                    TrueOrFalse.setText("ВЕРНО!");
+                    TrueOrFalse.setText("\nВЕРНО!\n");
+                    TrueOrFalse.setTextColor(Color.parseColor("#008000"));
+                    correct.start();
                 } else if (!isCorrect) {
-                    TrueOrFalse.setText("Неверно, не ромб. Попробуй еще раз!");
+                    TrueOrFalse.setText("Неверно!\nЭто не ромб.\nПопробуй еще!");
+                    TrueOrFalse.setTextColor(Color.parseColor("#FF0000"));
+                    wrong.start();
                 }
             }
         });
@@ -105,9 +132,13 @@ public class figures_buttons extends AppCompatActivity {
                 if (!isCorrect && figure == 5) {
                     isCorrect = true;
                     reset.setVisibility(View.VISIBLE);
-                    TrueOrFalse.setText("ВЕРНО!");
+                    TrueOrFalse.setText("\nВЕРНО!\n");
+                    TrueOrFalse.setTextColor(Color.parseColor("#008000"));
+                    correct.start();
                 } else if (!isCorrect) {
-                    TrueOrFalse.setText("Неверно, не треугольник. Попробуй еще раз!");
+                    TrueOrFalse.setText("Неверно!\nЭто не треугольник.\nПопробуй еще!");
+                    TrueOrFalse.setTextColor(Color.parseColor("#FF0000"));
+                    wrong.start();
                 }
             }
         });

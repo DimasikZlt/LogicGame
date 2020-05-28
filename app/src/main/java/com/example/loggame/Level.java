@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -21,6 +22,8 @@ public class Level extends AppCompatActivity {
     public static final String APP_PREFERENCES_TIME = "PRTime";
     private SharedPreferences mSettings;
     SharedPreferences.Editor editor;
+    MediaPlayer menu;
+    MediaPlayer error;
 
 
     @Override
@@ -34,6 +37,8 @@ public class Level extends AppCompatActivity {
         btnVH = findViewById(R.id.buttonVeryHard);
         mSettings = getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE);
         editor = mSettings.edit();
+        menu = MediaPlayer.create(this, R.raw.click_button);
+        error = MediaPlayer.create(this, R.raw.wrong);
         btnVE.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -42,8 +47,10 @@ public class Level extends AppCompatActivity {
                 if (mSettings.contains(APP_PREFERENCES_TIME)) {
                     if (mSettings.getInt(APP_PREFERENCES_TIME, 0) == 5000) {
                         Toast.makeText(getApplicationContext(), "Уровень сложности: 'Очень Легко'", Toast.LENGTH_SHORT).show();
+                        menu.start();
                     } else {
                         Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_SHORT).show();
+                        error.start();
                     }
                 }
                 Intent intent = new Intent(Level.this, MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -58,8 +65,10 @@ public class Level extends AppCompatActivity {
                 if (mSettings.contains(APP_PREFERENCES_TIME)) {
                     if (mSettings.getInt(APP_PREFERENCES_TIME, 0) == 3000) {
                         Toast.makeText(getApplicationContext(), "Уровень сложности: 'Легко'", Toast.LENGTH_SHORT).show();
+                        menu.start();
                     } else {
                         Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_SHORT).show();
+                        error.start();
                     }
                 }
                 Intent intent = new Intent(Level.this, MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -74,8 +83,10 @@ public class Level extends AppCompatActivity {
                 if (mSettings.contains(APP_PREFERENCES_TIME)) {
                     if (mSettings.getInt(APP_PREFERENCES_TIME, 0) == 1000) {
                         Toast.makeText(getApplicationContext(), "Уровень сложности: 'Нормально'", Toast.LENGTH_SHORT).show();
+                        menu.start();
                     } else {
                         Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_SHORT).show();
+                        error.start();
                     }
                 }
                 Intent intent = new Intent(Level.this, MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -90,8 +101,10 @@ public class Level extends AppCompatActivity {
                 if (mSettings.contains(APP_PREFERENCES_TIME)) {
                     if (mSettings.getInt(APP_PREFERENCES_TIME, 0) == 500) {
                         Toast.makeText(getApplicationContext(), "Уровень сложности: 'Сложно'", Toast.LENGTH_SHORT).show();
+                        menu.start();
                     } else {
                         Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_SHORT).show();
+                        error.start();
                     }
                 }
                 Intent intent = new Intent(Level.this, MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -106,8 +119,10 @@ public class Level extends AppCompatActivity {
                 if (mSettings.contains(APP_PREFERENCES_TIME)) {
                     if (mSettings.getInt(APP_PREFERENCES_TIME, 0) == 250) {
                         Toast.makeText(getApplicationContext(), "Уровень сложности: 'Очень Сложно'", Toast.LENGTH_SHORT).show();
+                        menu.start();
                     } else {
                         Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_SHORT).show();
+                        error.start();
                     }
                 }
                 Intent intent = new Intent(Level.this, MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
